@@ -1,0 +1,93 @@
+/*------------------------------------------------------------------
+    Component: Post Info
+-------------------------------------------------------------------*/
+
+.post-info {
+    position: sticky;
+    top: 148px;
+    width: 100%;
+    height: 1px;
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @media (max-width: 1580px) {
+        display: none;
+    }
+}
+
+.post-info-inner {
+    position: absolute;
+    top: 0;
+    right: -23.5vw;
+    width: 320px;
+
+    &:after {
+        position: absolute;
+        bottom: -38px;
+        left: 0;
+        width: 44%;
+        height: 1px;
+        content: '';
+        background-color: #e8e8ef;
+    }
+}
+
+.post-info-avatar {
+    display: block;
+    width: 58px;
+    height: 58px;
+    margin: 0 0 28px;
+    border-radius: 116px;
+    overflow: hidden;
+}
+
+.post-info-avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-info-name {
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0 0 22px;
+    color: #18191c;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.post-info-bio {
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0 0 24px;
+    color: #50525e;
+}
+
+.post-info-social {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.post-info-social-item {
+    margin-right: 12px;
+    color: #ccd1d9;
+
+    svg {
+        width: 21px;
+        height: 17px;
+    }
+
+    &:hover {
+        svg {
+            color: #4e5053;
+        }
+    }
+}

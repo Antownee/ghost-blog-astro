@@ -1,0 +1,46 @@
+{{! Partial: Author }}
+
+<section class="author {{#is "post, page"}}author__post{{/is}}">
+    {{#if profile_image}}
+        <picture class="author-avatar">
+            <img class="author-avatar-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy" />
+        </picture>
+    {{/if}}
+    <div class="author-info">
+        <div class="author-title">{{t "Author"}}</div>
+        {{#is "author"}}
+            <h1 class="author-name"><a href="{{url}}">{{name}}</a></h1>
+        {{else}}
+            <h3 class="author-name"><a href="{{url}}">{{name}}</a></h3>
+        {{/is}}
+        <div class="author-url"><a href="{{website}}">{{website}}</a></div>
+        <p class="author-bio">{{bio}}</p>
+        <ul class="author-social">
+            {{#if twitter}}
+                <li class="author-social-item author-social-twitter">
+                    <a href="{{twitter_url}}" rel="noopener noreferrer" target="_blank" aria-label="Twitter">
+                        <svg class="svg-icon svg-icon-fill svg-icon-twitter">
+                            <use xlink:href="{{asset "svg/icons.svg"}}#twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+            {{/if}}
+            {{#if facebook}}
+                <li class="author-social-item author-social-facebook">
+                    <a href="{{facebook_url}}" rel="noopener noreferrer" target="_blank" aria-label="Facebook">
+                        <svg class="svg-icon svg-icon-fill svg-icon-twitter">
+                            <use xlink:href="{{asset "svg/icons.svg"}}#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+            {{/if}}
+            <li class="author-social-item author-social-rss">
+                <a href="{{url}}rss/" target="_blank" aria-label="RSS">
+                    <svg class="svg-icon svg-icon-fill svg-icon-rss">
+                        <use xlink:href="{{asset "svg/icons.svg"}}#rss"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>

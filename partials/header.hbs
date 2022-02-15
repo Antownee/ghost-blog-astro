@@ -1,0 +1,8 @@
+{{! Partial: Header }}
+
+<header class="header {{#if post.feature_image}}header__overlay{{/if}}">
+    {{> "blog-title"}}
+    {{#if @site.navigation}}
+        {{> "menu"}}
+    {{/if}}
+</header>

@@ -1,0 +1,64 @@
+{{! Partial: Post Footer }}
+
+<section class="post-footer">
+    <ul class="post-share">
+        <li class="post-share-item post-share-title">{{t "Share"}}:</li>
+        <li class="post-share-item post-share-item-twitter">
+            <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+                <svg class="svg-icon svg-icon-fill svg-icon-twitter">
+                    <use xlink:href="{{asset "svg/icons.svg"}}#twitter"></use>
+                </svg>
+                <span>Twitter</span>
+            </a>
+        </li>
+        <li class="post-share-item post-share-item-facebook">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+                <svg class="svg-icon svg-icon-fill svg-icon-facebook">
+                    <use xlink:href="{{asset "svg/icons.svg"}}#facebook"></use>
+                </svg>
+                <span>Facebook</span>
+            </a>
+        </li>
+        <li class="post-share-item post-share-item-linkedin">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}&amp;title={{encode title}}" onclick="window.open(this.href, 'linkedin-share', 'width=930,height=720');return false;">
+                <svg class="svg-icon svg-icon-fill svg-icon-linkedin">
+                    <use xlink:href="{{asset "svg/icons.svg"}}#linkedin"></use>
+                </svg>
+                <span>LinkedIn</span>
+            </a>
+        </li>
+        <li class="post-share-item post-share-item-email">
+            <a href="mailto:?subject={{encode title}}&body={{url absolute="true"}}">
+                <svg class="svg-icon svg-icon-stroke svg-icon-send">
+                    <use xlink:href="{{asset "svg/icons.svg"}}#send"></use>
+                </svg>
+                <span>{{t "Email"}}</span>
+            </a>
+        </li>
+        <li class="post-share-item post-share-item-permalink">
+            <a href="{{url absolute="true"}}" data-clipboard-text="{{url absolute="true"}}">
+                <svg class="svg-icon svg-icon-stroke svg-icon-copy">
+                    <use xlink:href="{{asset "svg/icons.svg"}}#copy"></use>
+                </svg>
+                <span>{{t "Permalink"}}</span>
+                <div class="post-share-item-tooltip">{{t "Permalink Copied"}}</div>
+            </a>
+            <label for="permalink-area" class="post-share-item-permalink-area">
+                <span>{{t "Permalink"}}</span>
+                <textarea class="post-share-item-permalink-copy" id="permalink-area" name="permalink-area">{{url absolute="true"}}</textarea>
+            </label>
+        </li>
+    </ul>
+    {{#if tags}}
+        <ul class="post-tags">
+            {{#foreach tags}}
+                <li class="post-tags-item post-tags-item-{{slug}}"><a href="{{url}}">{{name}}</a></li>
+            {{/foreach}}
+        </ul>
+    {{/if}}
+    {{#if authors}}
+        <div class="post-authors">
+            {{t "Written in collaboration with"}}: <span class="post-authors-items">{{authors}}</span>
+        </div>
+    {{/if}}
+</section>

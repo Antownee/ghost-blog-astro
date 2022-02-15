@@ -1,0 +1,152 @@
+/*------------------------------------------------------------------
+    Component: Post Share
+-------------------------------------------------------------------*/
+
+.post-share {
+    display: flex;
+    flex-direction: row;
+    margin: -15px 0 68px;
+    padding: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @media (max-width: 720px) {
+        margin-bottom: 58px;
+        justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: 48px;
+    }
+}
+
+.post-share-item {
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    margin: 15px 32px 0 0;
+    list-style: none;
+    color: #303236;
+
+    svg {
+        width: 22px;
+        height: 18px;
+        margin-right: 8px;
+        vertical-align: -3px;
+        color: #ccd1d9;
+    }
+
+    svg.svg-icon-stroke {
+        width: 25px;
+        height: 21px;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    @media (max-width: 880px) {
+        font-size: 14px;
+        margin: 15px 20px 0 0;
+
+        svg {
+            width: 19px;
+            height: 15px;
+            margin-right: 4px;
+        }
+    }
+}
+
+.post-share-item-tooltip {
+    font-size: 13px;
+    font-weight: 600;
+    position: absolute;
+    top: -52px;
+    left: -9px;
+    width: 140px;
+    padding: 8px 15px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    color: #fff;
+    color: #3c3b42;
+    border-radius: 3px;
+    background: #f7f5fb;
+}
+
+.post-share-item-twitter {
+    color: $color-twitter-dark;
+
+    a:hover {
+        svg {
+            color: $color-twitter-dark;
+        }
+    }
+}
+
+.post-share-item-facebook {
+    color: $color-facebook;
+
+    a:hover {
+        svg {
+            color: $color-facebook;
+        }
+    }
+}
+
+.post-share-item-linkedin {
+    color: $color-linkedin;
+
+    a:hover {
+        svg {
+            color: $color-linkedin;
+        }
+    }
+}
+
+.post-share-item-email {
+    color: $color-email;
+
+    a:hover {
+        svg {
+            color: $color-email;
+        }
+    }
+}
+
+.post-share-item-permalink {
+    color: #303236;
+
+    a:hover {
+        svg {
+            color: #303236;
+        }
+    }
+}
+
+.post-share-item-permalink-area {
+    position: absolute;
+    bottom: -80px;
+    pointer-events: none;
+
+    span {
+        color: transparent;
+    }
+}
+
+.post-share-item-permalink-copy {
+    opacity: 0;
+}
+
+.post-share-title {
+    font-size: 17px;
+    margin-right: 26px;
+
+    @media (max-width: 720px) {
+        width: 100%;
+        margin: 0 22px 14px 0;
+        text-align: center;
+    }
+}

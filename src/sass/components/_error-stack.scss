@@ -1,0 +1,54 @@
+/*------------------------------------------------------------------
+    Component: Error Stack
+-------------------------------------------------------------------*/
+
+.error-stack {
+    display: flex;
+    flex-direction: column;
+    max-width: 490px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+
+    @media (max-width: 720px) {
+        margin: 0 auto 58px;
+    }
+
+    @media (max-width: 480px) {
+        margin: 0 auto 48px;
+    }
+}
+
+.error-stack-title {
+    font-size: 53px;
+    margin: 0 0 24px;
+    color: #1b1c1f;
+
+    @media (max-width: 720px) {
+        font-size: 43px;
+        margin: 0 0 20px;
+    }
+}
+
+.error-stack-subtitle {
+    font-family: var(--font-body);
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 38px;
+    text-transform: capitalize;
+    color: #868588;
+
+    @media (max-width: 720px) {
+        font-size: 20px;
+        margin: 0 0 30px;
+    }
+}
+
+.error-stack-message {
+    line-height: 34px;
+
+    @media (max-width: 720px) {
+        font-size: 17px;
+        line-height: 30px;
+    }
+}

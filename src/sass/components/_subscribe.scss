@@ -1,0 +1,127 @@
+/*------------------------------------------------------------------
+    Component: Sign-Up Form
+-------------------------------------------------------------------*/
+
+.subscribe {
+    font-size: 18px;
+    line-height: 34px;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0;
+    text-align: center;
+    color: #535763;
+    border-top: 1px solid #e8e8ef;
+    align-items: center;
+
+    @media (max-width: 720px) {
+        padding: 58px 0;
+    }
+
+    @media (max-width: 480px) {
+        padding: 48px 0;
+    }
+}
+
+main .subscribe {
+    border-top: 0;
+}
+
+.subscribe__header {
+    font-size: 34px;
+    margin: 0 0 45px;
+    color: #1b1c1f;
+
+    @media (max-width: 720px) {
+        font-size: 24px;
+        margin: 0 0 28px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 22px;
+        margin: 0 0 24px;
+    }
+}
+
+.subscribe__description {
+    max-width: 545px;
+    margin: 0 0 48px;
+
+    @media (max-width: 720px) {
+        font-size: 16px;
+        line-height: 34px;
+        margin: 0 0 38px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 15px;
+        line-height: 28px;
+        margin: 0 0 34px;
+    }
+}
+
+.subscribe__box {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+}
+
+.subscribe__label {
+    span {
+        position: absolute;
+        top: -20px;
+        user-select: none;
+        color: transparent;
+    }
+}
+
+.subscribe__email {
+    width: 100%;
+    margin: 0 0 28px;
+}
+
+.subscribe__button {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    cursor: pointer;
+    color: var(--color-accent);
+    background-color: transparent;
+
+    svg {
+        transition: transform 0.2s ease-out;
+        transform: translateX(0px);
+    }
+
+    &:hover {
+        svg {
+            transform: translateX(3px);
+        }
+    }
+}
+
+.subscribe__message {
+    display: none;
+}
+
+.subscribe.loading {
+    .subscribe__continue {
+        display: none;
+    }
+}
+
+.subscribe.success {
+    .subscribe__message--success {
+        display: block;
+    }
+
+    .subscribe__description,
+    .subscribe__box {
+        display: none;
+    }
+}
+
+.subscribe.error {
+    .subscribe__message--error {
+        display: block;
+    }
+}

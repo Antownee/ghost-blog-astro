@@ -1,0 +1,31 @@
+{{! Partial: Post Cover }}
+
+<section class="post-cover {{#is "page"}}post-cover__short{{/is}}">
+    <picture class="post-cover-background">
+        <img
+            class="post-cover-background-image"
+            srcset="{{img_url feature_image size="s"}} 350w,
+                {{img_url feature_image size="m"}} 700w,
+                {{img_url feature_image size="l"}} 1000w,
+                {{img_url feature_image size="xl"}} 1600w,
+                {{img_url feature_image size="xxl"}} 1920w"
+            sizes="100vw"
+            src="{{img_url feature_image size="xxl"}}"
+            alt="{{t "Cover"}}"
+            loading="lazy"
+        />
+    </picture>
+    <div class="wrapper">
+        {{#is "post"}}
+            {{> "post-info"}}
+        {{/is}}
+        {{> "post-header"}}
+    </div>
+    {{#is "post"}}
+        <div class="post-cover-arrow">
+            <svg class="svg-icon svg-icon-stroke svg-icon-arrow-down">
+                <use xlink:href="{{asset "svg/icons.svg"}}#arrow-down"></use>
+            </svg>
+        </div>
+    {{/is}}
+</section>

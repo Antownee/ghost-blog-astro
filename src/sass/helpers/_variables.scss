@@ -1,0 +1,39 @@
+/*------------------------------------------------------------------
+    Helper: Variables
+-------------------------------------------------------------------*/
+
+/* THEME COLORS */
+
+$color-accent-lighter: #71b0fd;
+$color-accent-light: #176fdb;
+$color-accent: #014fb0;
+$color-accent-dark: #003372;
+$color-accent-darker: #002149;
+
+/* SOCIAL COLORS */
+
+$color-twitter: #55acee;
+$color-twitter-dark: #147AC8;
+$color-facebook: #3b5998;
+$color-linkedin: #0e76a8;
+$color-email: #4f8110;
+
+/* FONTS */
+
+$font-header: 'PT Serif', 'Times New Roman', Serif;
+$font-body: 'Muli', 'Arial', Sans-Serif;
+$font-code: 'PT Mono', 'Monaco', 'Courier New', Sans-Serif;
+
+
+/* ROOT */
+
+:root {
+    --color-accent-lighter: #{$color-accent-lighter};
+    --color-accent-light: #{$color-accent-light};
+    --color-accent: #{$color-accent};
+    --color-accent-dark: #{$color-accent-dark};
+    --color-accent-darker: #{$color-accent-darker};
+    --font-header: #{$font-header};
+    --font-body: #{$font-body};
+    --font-code: #{$font-code};
+}

@@ -1,0 +1,11 @@
+{{! Partial: Blog Title }}
+
+<div class="blog-title">
+    {{#if @site.logo}}
+        <a href="{{@site.url}}" class="blog-title-logo">
+            <img src="{{@site.logo}}" alt="{{@site.title}}"/>
+        </a>
+    {{else}}
+        <h1 class="blog-title-header"><a href="{{@site.url}}">{{@site.title}}</a></h1>
+    {{/if}}
+</div>

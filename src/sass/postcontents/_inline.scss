@@ -1,0 +1,39 @@
+/*------------------------------------------------------------------
+    Post Contents: Inline
+-------------------------------------------------------------------*/
+
+.post-contents {
+    a {
+        font-weight: 600;
+        color: #535763;
+        text-decoration-color: #e7ecf1;
+
+        &:hover {
+            text-decoration-color: var(--color-accent);
+        }
+    }
+
+    code {
+        font-family: var(--font-code);
+        font-size: 16px;
+        font-weight: 600;
+        display: inline-block;
+        margin: 0 5px;
+        padding: 0 8px;
+        color: #2c3034;
+        background: #f4f4f6;
+
+        @media (max-width: 720px) {
+            font-size: 15px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 14px;
+        }
+    }
+
+    mark {
+        color: #19191b;
+        background-color: #d4e7ff;
+    }
+}

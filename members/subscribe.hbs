@@ -1,0 +1,16 @@
+{{! Template: Members - Subscribe }}
+{{!< ../default}}
+
+<div class="wrapper">
+
+    <main class="page page--center page--full-height">
+
+        {{#if @member}}
+            <script>window.location = '{{@site.url}}/#/portal/account';</script>
+        {{else}}
+            <script>window.location = '{{@site.url}}/#/portal/signup/free';</script>
+        {{/if}}
+
+    </main>
+
+</div>

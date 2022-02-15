@@ -1,0 +1,28 @@
+{{! Partial: Subscribe Form }}
+
+{{^if @member}}
+    <form class="subscribe" data-members-form="signup">
+        <h1 class="subscribe__header">{{t "Subscribe to {blogtitle}" blogtitle=@site.title}}</h1>
+        <p class="subscribe__description">{{t "Subscribe to {blogtitle} and receive access to exclusive posts and content updates. We don't spam and your email won't be shared with third-parties." blogtitle=@site.title}}</p>
+        <div class="subscribe__box">
+            <label class="subscribe__label" for="email">
+                <span>{{t "Email Address"}}</span>
+                <input name="email" class="subscribe__email" data-members-email type="email" placeholder="{{t "Type your email..."}}" required="true" autocomplete="false" />
+            </label>
+            <button class="subscribe__button" type="submit" aria-label="{{t "Subscribe"}}">
+                <span class="subscribe__continue">
+                    <svg class="svg-icon svg-icon-stroke svg-icon-arrow-right-circle">
+                        <use xlink:href="{{asset "svg/icons.svg"}}#arrow-right-circle"></use>
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <div class="subscribe__message subscribe__message--success">
+            <p><strong>{{t "Thanks for subscribing!"}}</strong></p>
+            <p>{{t "Check your inbox to confirm your subscription."}}</p>
+        </div>
+        <div class="subscribe__message subscribe__message--error">
+            <p><strong>{{t "Please enter a valid email address!"}}</strong></p>
+        </div>
+    </form>
+{{/if}}

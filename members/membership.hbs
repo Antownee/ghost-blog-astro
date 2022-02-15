@@ -1,0 +1,16 @@
+{{! Template: Members - Membership }}
+{{!< ../default}}
+
+<div class="wrapper wrapper--wide">
+
+    <main class="page page--center page--full-height">
+
+        {{#if @member.paid}}
+            <script>window.location = '{{@site.url}}/#/portal/account';</script>
+        {{else}}
+            <script>window.location = '{{@site.url}}/#/portal/signup';</script>
+        {{/if}}
+
+    </main>
+
+</div>

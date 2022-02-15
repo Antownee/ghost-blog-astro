@@ -1,0 +1,7 @@
+{{! Partial: Error }}
+
+<section class="error-stack">
+    <h1 class="error-stack-title">{{t "Error"}} {{statusCode}}</h1>
+    <h2 class="error-stack-subtitle">{{message}}</h2>
+    <p class="error-stack-message">{{{t "The page you were looking for cannot be found, it may have been moved or no longer exists. Navigate back to the homepage by clicking <a href='{url}'>here</a>." url=@site.url}}}</p>
+</section>

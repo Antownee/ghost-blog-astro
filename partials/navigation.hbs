@@ -1,0 +1,9 @@
+{{! Partial: Navigation }}
+
+<ul class="navigation" role="menu">
+    {{#foreach navigation}}
+        <li class="navigation-item navigation-item-{{slug}} {{#if current}}navigation-item__current{{/if}}" role="none">
+            <a href="{{url absolute="true"}}" role="menuitem">{{label}}</a>
+        </li>
+    {{/foreach}}
+</ul>

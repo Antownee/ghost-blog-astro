@@ -1,0 +1,13 @@
+{{! Partial: Post Comments }}
+
+<section class="post-comments">
+    <div class="post-comments-view">
+        <svg class="svg-icon svg-icon-stroke svg-icon-message-square">
+            <use xlink:href="{{asset "svg/icons.svg"}}#message-square"></use>
+        </svg>
+        {{t "View Comments"}}
+    </div>
+    <div class="post-comments-disqus">
+        <div id="disqus_thread"></div> {{!-- Disqus comments will be lazy loaded into this container --}}
+    </div>
+</section>

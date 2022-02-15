@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------
+    Component: Post Footer
+-------------------------------------------------------------------*/
+
+.post-footer {
+    padding: 0 0 68px;
+    border-bottom: 1px solid #e8e8ef;
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 720px) {
+        padding: 0 0 58px;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0 0 48px;
+    }
+}

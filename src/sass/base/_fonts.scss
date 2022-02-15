@@ -1,0 +1,42 @@
+/*------------------------------------------------------------------
+    Base: Fonts
+-------------------------------------------------------------------*/
+@font-face {
+    font-family: 'PT Mono';
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+    src: local('PT Mono'), local('PTMono-Regular'), url('{{asset "font/PTMono-Regular.woff"}}') format('woff');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+    src: local('Muli Regular'), local('Muli-Regular'), url('{{asset "font/Muli-Regular.woff"}}') format('woff');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-weight: 600;
+    font-style: normal;
+    font-display: block;
+    src: local('Muli SemiBold'), local('Muli-SemiBold'), url('{{asset "font/Muli-SemiBold.woff"}}') format('woff');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+    src: local('Muli Bold'), local('Muli-Bold'), url('{{asset "font/Muli-Bold.woff"}}') format('woff');
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+    src: local('PT Serif Bold'), local('PTSerif-Bold'), url('{{asset "font/PTSerif-Bold.woff"}}') format('woff');
+}

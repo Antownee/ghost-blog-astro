@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------
+    Layout: Header
+-------------------------------------------------------------------*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    padding: 80px;
+    align-items: center;
+    justify-content: space-between;
+
+    &__overlay {
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .menu-button {
+            color: #bebebe;
+
+            &:focus,
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    @media (max-width: 920px) {
+        width: 100%;
+        margin: 0 auto;
+        padding: 80px 7.5%;
+    }
+
+    @media (max-width: 720px) {
+        padding: 60px 7.5%;
+    }
+}

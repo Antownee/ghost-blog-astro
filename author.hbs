@@ -1,0 +1,20 @@
+{{! Template: Author }}
+{{!< default}}
+
+<div class="wrapper">
+
+    <main class="page">
+
+        {{#author}}
+            {{> "author"}}
+        {{/author}}
+
+        {{> "post-list"}}
+
+        {{pagination}}
+
+    </main>
+
+    {{> "subscribe"}}
+
+</div>

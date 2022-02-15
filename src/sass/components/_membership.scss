@@ -1,0 +1,97 @@
+/*------------------------------------------------------------------
+    Component: Checkout Form
+-------------------------------------------------------------------*/
+
+.membership {
+    font-size: 18px;
+    line-height: 34px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    color: #535763;
+    align-items: center;
+}
+
+.membership__header {
+    font-size: 34px;
+    margin: 0 0 45px;
+    color: #1b1c1f;
+
+    @media (max-width: 720px) {
+        font-size: 24px;
+        margin: 0 0 28px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 22px;
+        margin: 0 0 24px;
+    }
+}
+
+.membership__description {
+    max-width: 595px;
+    margin: 0;
+
+    @media (max-width: 720px) {
+        font-size: 16px;
+        line-height: 34px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 15px;
+        line-height: 28px;
+    }
+}
+
+.membership__box {
+    display: grid;
+    width: 100%;
+    margin: 55px 0 0;
+    gap: 50px;
+    grid-template-areas: 'monthly yearly';
+    grid-template-columns: repeat(2, 1fr);
+
+    .plan--subscriber {
+        display: none;
+        grid-area: subscriber;
+    }
+
+    .plan--monthly {
+        grid-area: monthly;
+    }
+
+    .plan--yearly {
+        grid-area: yearly;
+    }
+
+    &--show-subscriber {
+        grid-template-areas: 'subscriber monthly yearly';
+        grid-template-columns: repeat(3, 1fr);
+
+        .plan--subscriber {
+            display: block;
+        }
+    }
+
+    @media (max-width: 1260px) {
+        max-width: 840px;
+
+        &--show-subscriber {
+            grid-template-areas: 'monthly yearly'
+            'subscriber subscriber';
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 840px) {
+        max-width: 840px;
+        margin: 45px 0 0;
+        grid-auto-rows: repeat(3, 1fr);
+        grid-template-areas: 'monthly'
+        'yearly'
+        'subscriber';
+        grid-template-columns: 1fr;
+    }
+}

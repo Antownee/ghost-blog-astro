@@ -1,0 +1,143 @@
+/*------------------------------------------------------------------
+    Component: Post Cover
+-------------------------------------------------------------------*/
+
+.post-cover {
+    position: relative;
+    z-index: 600;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #0f0f10;
+    align-items: center;
+    align-self: center;
+
+    &__short {
+        height: 60vh;
+    }
+
+    @media (max-width: 880px) {
+        min-height: 780px;
+    }
+
+    @media (max-width: 720px) {
+        min-height: 600px;
+        max-height: 85vh;
+        padding-bottom: 10%;
+        align-items: flex-end;
+    }
+
+    @media (max-width: 480px) {
+        min-height: 460px;
+    }
+}
+
+.post-cover-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #424346;
+}
+
+.post-cover-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: overlay;
+    user-select: none;
+    pointer-events: none;
+}
+
+.post-cover-arrow {
+    position: absolute;
+    right: 80px;
+    bottom: 78px;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+
+    svg {
+        width: 34px;
+        height: 34px;
+        animation: bounce 3s infinite;
+        color: #fff;
+        color: rgba(#fff, 0.6);
+    }
+
+    &:hover {
+        svg {
+            color: rgba(#fff, 1);
+        }
+    }
+
+    @media (max-width: 720px) {
+        display: none;
+    }
+}
+
+.post-cover .post-header {
+    margin-bottom: 0;
+
+    .post-header-title {
+        color: #fff;
+    }
+
+    .post-header-category {
+        opacity: 1;
+        color: rgba(255, 255, 255, 0.6);
+
+        a:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+
+    .post-meta {
+        color: #fff;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    .post-meta-avatar {
+        display: none;
+    }
+
+    @media (max-width: 1580px) {
+        .post-meta-avatar {
+            display: inline-block;
+        }
+    }
+}
+
+.post-cover .post-info {
+    position: relative;
+    top: 0;
+
+    .post-info-inner {
+        &:after {
+            background-color: rgba(#e8e8ef, 0.25);
+        }
+    }
+
+    .post-info-name {
+        color: #fff;
+    }
+
+    .post-info-bio {
+        color: #f3f3f6;
+    }
+
+    .post-info-social-item {
+        color: rgba(#fff, 0.65);
+
+        &:hover {
+            svg {
+                color: rgba(#fff, 1);
+            }
+        }
+    }
+}

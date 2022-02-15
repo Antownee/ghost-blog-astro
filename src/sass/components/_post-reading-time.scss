@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------
+    Component: Post Reading Time
+-------------------------------------------------------------------*/
+
+.post-reading-time {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    position: fixed;
+    z-index: 500;
+    left: 40px;
+    bottom: 40px;
+    padding: 12px 23px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    color: #808080;
+    border-radius: 3px;
+    background-color: #f8f8fb;
+
+    &__visible {
+        opacity: 1;
+    }
+
+    &:empty {
+        display: none;
+    }
+
+    @media (max-width: 880px) {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+
+    @media (max-width: 720px) {
+        visibility: hidden;
+        pointer-events: none;
+    }
+}

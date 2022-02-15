@@ -1,0 +1,32 @@
+{{! Template: Page }}
+{{!< default}}
+
+{{#post}}
+
+    <main class="page">
+
+        <article class="post {{#if feature_image}}post-featured{{/if}}">
+
+            {{#if feature_image}}
+                {{> "post-cover"}}
+            {{/if}}
+
+            <div class="wrapper">
+
+                {{^if feature_image}}
+                    {{> "post-header"}}
+                {{/if}}
+
+                {{> "post-main"}}
+
+            </div>
+
+        </article>
+
+    </main>
+
+    <div class="wrapper">
+        {{> "subscribe"}}
+    </div>
+
+{{/post}}

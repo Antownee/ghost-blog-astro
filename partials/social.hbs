@@ -1,0 +1,38 @@
+{{! Partial: Social Blog }}
+
+<section class="social">
+    {{#if @site.twitter}}
+        <a href="{{twitter_url}}" class="social-item social-twitter" rel="noopener noreferrer" target="_blank" aria-label="Twitter">
+            <svg class="svg-icon svg-icon-fill svg-icon-twitter">
+                <use xlink:href="{{asset "svg/icons.svg"}}#twitter"></use>
+            </svg>
+        </a>
+    {{/if}}
+    {{#if @site.facebook}}
+        <a href="{{facebook_url}}" class="social-item social-facebook" rel="noopener noreferrer" target="_blank" aria-label="Facebook">
+            <svg class="svg-icon svg-icon-fill svg-icon-facebook">
+                <use xlink:href="{{asset "svg/icons.svg"}}#facebook"></use>
+            </svg>
+        </a>
+    {{/if}}
+    <a href="#" class="social-item social-instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg class="svg-icon svg-icon-fill svg-icon-instagram">
+            <use xlink:href="{{asset "svg/icons.svg"}}#instagram"></use>
+        </svg>
+    </a>
+    <a href="#" class="social-item social-github" rel="noopener noreferrer" target="_blank" aria-label="Github">
+        <svg class="svg-icon svg-icon-fill svg-icon-github">
+            <use xlink:href="{{asset "svg/icons.svg"}}#github"></use>
+        </svg>
+    </a>
+    <a href="#" class="social-item social-linkedin" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+        <svg class="svg-icon svg-icon-fill svg-icon-linkedin">
+            <use xlink:href="{{asset "svg/icons.svg"}}#linkedin"></use>
+        </svg>
+    </a>
+    <a href="{{@site.url}}/rss/" class="social-item social-rss" target="_blank" aria-label="RSS">
+        <svg class="svg-icon svg-icon-fill svg-icon-rss">
+            <use xlink:href="{{asset "svg/icons.svg"}}#rss"></use>
+        </svg>
+    </a>
+</section>

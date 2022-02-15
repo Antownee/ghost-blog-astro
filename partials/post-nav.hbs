@@ -1,0 +1,22 @@
+{{! Partial: Post Navigation }}
+
+<section class="post-nav">
+    {{#next_post}}
+        <a href="{{url}}" class="post-nav-next">
+            <div class="post-nav-inner">
+                <span class="post-nav-type">{{t "Next Post"}}</span>
+                <h4 class="post-nav-title">{{title}}</h4>
+                <div class="post-nav-published"><time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="MMMM Do, YYYY"}}</time></div>
+            </div>
+        </a>
+    {{/next_post}}
+    {{#prev_post}}
+        <a href="{{url}}" class="post-nav-previous">
+            <div class="post-nav-inner">
+                <span class="post-nav-type">{{t "Previous Post"}}</span>
+                <h4 class="post-nav-title">{{title}}</h4>
+                <div class="post-nav-published"><time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="MMMM Do, YYYY"}}</time></div>
+            </div>
+        </a>
+    {{/prev_post}}
+</section>

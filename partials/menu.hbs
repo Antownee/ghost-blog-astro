@@ -1,0 +1,47 @@
+{{! Partial: Menu }}
+
+<section class="menu">
+    <div class="menu-buttons">
+        <div class="menu-button menu-button--search js-search-open">
+            <svg class="menu-icon--search svg-icon svg-icon-stroke svg-icon-search">
+                <use xlink:href="{{asset "svg/icons.svg"}}#search"></use>
+            </svg>
+        </div>
+        <div class="menu-button menu-button--navigation js-navigation-open">
+            <div class="menu-icon--navigation"></div>
+        </div>
+    </div>
+    <nav class="menu-main">
+        <div class="menu-navigation">
+            {{navigation}}
+        </div>
+        <div class="menu-member">
+            <ul class="navigation" role="menu">
+                {{#if @member.paid}}
+                    <li class="navigation-item navigation-item-account" role="none">
+                        <a href="#/portal/account" role="menuitem">{{t "My Account"}}</a>
+                    </li>
+                    <li class="navigation-item navigation-item-signout" role="none" data-members-signout>
+                        <a href="javascript:" role="menuitem">{{t "Sign Out"}}</a>
+                    </li>
+                {{else if @member}}
+                    <li class="navigation-item navigation-item-account" role="none">
+                        <a href="#/portal/account" role="menuitem">{{t "My Account"}}</a>
+                    </li>
+                    <li class="navigation-item navigation-item-signout" role="none" data-members-signout>
+                        <a href="javascript:" role="menuitem">{{t "Sign Out"}}</a>
+                    </li>
+                {{else}}
+                    {{^if @price.monthly}}
+                        <li class="navigation-item navigation-item-subscribe" role="none">
+                            <a href="#/portal/signup" role="menuitem">{{t "Subscribe"}}</a>
+                        </li>
+                    {{/if}}
+                    <li class="navigation-item navigation-item-signin" role="none">
+                        <a href="#/portal/signin" role="menuitem">{{t "Sign In"}}</a>
+                    </li>
+                {{/if}}
+            </ul>
+        </div>
+    </nav>
+</section>

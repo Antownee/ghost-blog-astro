@@ -1,0 +1,78 @@
+/*------------------------------------------------------------------
+    Component: Content CTA
+-------------------------------------------------------------------*/
+
+.post-contents .content-cta {
+    display: flex;
+    max-width: 120%;
+    margin: 70px -10% 90px;
+    padding: 70px;
+    text-align: center;
+    color: #535763;
+    border: 1px solid #e8e8ef;
+    border-radius: 3px;
+    justify-content: center;
+
+    &__header {
+        font-size: 32px;
+        margin: 0 0 40px;
+        text-transform: capitalize;
+        color: #1b1c1f;
+
+        @media (max-width: 720px) {
+            font-size: 28px;
+            margin: 0 0 28px;
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 36px;
+        width: 90%;
+        max-width: 700px;
+        margin: 40px auto;
+
+        @media (max-width: 720px) {
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+
+    &__button {
+        font-size: 16px;
+        font-weight: 600;
+        display: inline-block;
+        width: 90%;
+        max-width: 350px;
+        padding: 21px 42px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 80px;
+        background: var(--color-accent);
+
+        &:hover {
+            background: var(--color-accent-dark);
+        }
+    }
+
+    &__sign-in {
+        font-size: 17px;
+        margin: 30px 0 0;
+        color: #7a7f91;
+
+        @media (max-width: 720px) {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 1040px) {
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 60px;
+    }
+
+    @media (max-width: 720px) {
+        padding: 50px;
+    }
+}

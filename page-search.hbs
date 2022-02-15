@@ -1,0 +1,28 @@
+{{! Template: Page - Search }}
+{{!< default}}
+
+{{#post}}
+
+    <main class="page">
+
+        <article class="post {{#if feature_image}}post-featured{{/if}}">
+
+            {{#if feature_image}}
+                {{> "post-cover"}}
+            {{/if}}
+
+            <div class="wrapper">
+
+                {{^if feature_image}}
+                    {{> "post-header"}}
+                {{/if}}
+
+                {{> "search"}}
+
+            </div>
+
+        </article>
+
+    </main>
+
+{{/post}}

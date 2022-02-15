@@ -1,0 +1,11 @@
+{{! Partial: Copyright }}
+
+<section class="copyright">
+    <div class="copyright-disclaimer">{{t "Copyright"}} &copy; <a href="{{@site.url}}">{{@site.title}}</a> {{date format="YYYY"}} <span class="copyright-bullet">&bull;</span> {{t "All rights reserved."}}</div>
+    {{#if @site.secondary_navigation}}
+        <div class="copyright-menu">
+            {{navigation type="secondary"}}
+        </div>
+    {{/if}}
+    <div class="copyright-ghost">{{{t "Published with <a href='https://ghost.org/'>Ghost</a>."}}}</div>
+</section>

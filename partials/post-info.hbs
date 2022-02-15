@@ -1,0 +1,44 @@
+{{! Partial: Post Info }}
+
+{{#primary_author}}
+    {{#if bio}}
+        <section class="post-info">
+            <div class="post-info-inner">
+                {{#if profile_image}}
+                    <picture class="post-info-avatar">
+                        <img class="post-info-avatar-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy" />
+                    </picture>
+                {{/if}}
+                <div class="post-info-name"><a href="{{url}}">{{name}}</a></div>
+                <div class="post-info-bio">{{bio}}</div>
+                <ul class="post-info-social">
+                    {{#if twitter}}
+                        <li class="post-info-social-item post-info-social-twitter">
+                            <a href="{{twitter_url}}" rel="noopener noreferrer" target="_blank" aria-label="Twitter">
+                                <svg class="svg-icon svg-icon-fill svg-icon-twitter">
+                                    <use xlink:href="{{asset "svg/icons.svg"}}#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    {{/if}}
+                    {{#if facebook}}
+                    <li class="post-info-social-item">
+                        <a href="{{facebook_url}}" rel="noopener noreferrer" target="_blank" aria-label="Facebook">
+                            <svg class="svg-icon svg-icon-fill svg-icon-facebook">
+                                <use xlink:href="{{asset "svg/icons.svg"}}#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    {{/if}}
+                    <li class="post-info-social-item">
+                        <a href="{{url}}rss/" target="_blank" aria-label="RSS">
+                            <svg class="svg-icon svg-icon-fill svg-icon-rss">
+                                <use xlink:href="{{asset "svg/icons.svg"}}#rss"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    {{/if}}
+{{/primary_author}}
